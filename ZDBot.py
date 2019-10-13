@@ -23,7 +23,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author.bot:
+    if message.author == client.user:
         return
     elif message.content[0] == BOT_PREFIX:
         if message.content == '!roll':
